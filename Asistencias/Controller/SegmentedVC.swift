@@ -8,6 +8,7 @@
 
 import UIKit
 import SQLite
+import SCLAlertView
 import Loaf
 
 class SegmentedVC: UIViewController {
@@ -33,38 +34,34 @@ class SegmentedVC: UIViewController {
     }
     
     @objc func addTapped() {
-        let alert = UIAlertController(title: "Nuevo Alumno", message: nil, preferredStyle: .alert)
-        alert.addTextField { (tf) in tf.placeholder = "Nombre(s)" }
-        alert.addTextField { (tf) in tf.placeholder = "Apellido(s)" }
-        alert.addTextField { (tf) in tf.keyboardType = .numberPad; tf.placeholder = "Matricula" }
+        let appearance = SCLAlertView.SCLAppearance(
+            kTextFieldHeight: 60,
+            showCloseButton: true
+        )
         
-        let cancel = UIAlertAction(title: "Cancelar", style: .destructive, handler: nil)
-        
-        let insert = UIAlertAction(title: "Guardar", style: .default) { (_) in
-            guard let name = alert.textFields?.first?.text,
-                let lastName = alert.textFields?[1].text,
-                let studentId = alert.textFields?.last?.text
-                else { return }
+        let alert = SCLAlertView(appearance: appearance)
+        let name = alert.addTextField("Nombre(s)")
+        let lastname = alert.addTextField("Apellido(s)")
+        let schoolId = alert.addTextField("Matricula")
+        _ = alert.addButton("Guardar") {
+            let insertStudent = studentsTable.insert(studentName <- name.text ?? "", studentLastName <- lastname.text ?? "", studentSchoolId <- Int(schoolId.text ?? "000000")!)
             
-        let insertStudent = studentsTable.insert(studentName <- name, studentLastName <- lastName, studentSchoolId <- Int(studentId)!)
-        
-        do {
-            try globalDatabase.run(insertStudent)
-            let lastId = globalDatabase.lastInsertRowid
-            
-            let insertGroupStudent = groupStudentTable.insert(groupStudentGroupId <- currentGroupId, groupStudentStudentId <- Int(lastId))
-            
-            do { try globalDatabase.run(insertGroupStudent) }
+            do {
+                try globalDatabase.run(insertStudent)
+                let lastId = globalDatabase.lastInsertRowid
+                
+                let insertGroupStudent = groupStudentTable.insert(groupStudentGroupId <- currentGroupId, groupStudentStudentId <- Int(lastId))
+                
+                do { try globalDatabase.run(insertGroupStudent) }
+                catch { print(error) }
+            }
             catch { print(error) }
+            
+            Loaf("Alumno Agregado", state: .success, sender: self).show()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
         }
-        catch { print(error) }
+        _ = alert.showEdit("Nuevo Grupo", subTitle:"Crea un nuevo grupo")
         
-        Loaf("Alumno Agregado", state: .success, sender: self).show()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-        }
-        alert.addAction(cancel)
-        alert.addAction(insert)
-        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func segmAttendanceStudents(_ sender: UISegmentedControl) {

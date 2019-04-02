@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 import SQLite
 import Loaf
 
@@ -41,20 +42,17 @@ class GroupsVC: UIViewController {
     }
 
     @IBAction func addGroup(_ sender: Any) {
-        let alert = UIAlertController(title: "Nuevo Grupo", message: nil, preferredStyle: .alert)
-        alert.addTextField { (tf) in tf.placeholder = "Nombre" }
-        alert.addTextField { (tf) in tf.placeholder = "Clave" }
-        alert.addTextField { (tf) in tf.placeholder = "Limite de faltas" }
+        let appearance = SCLAlertView.SCLAppearance(
+            kTextFieldHeight: 60,
+            showCloseButton: true
+        )
         
-        let cancel = UIAlertAction(title: "Cancelar", style: .destructive, handler: nil)
-        
-        let insert = UIAlertAction(title: "Guardar", style: .default) { (_) in
-            guard let name = alert.textFields?.first?.text,
-                let code = alert.textFields?[1].text,
-                let limit = alert.textFields?.last?.text
-                else { return }
-            
-            let insertGroup = groupsTable.insert(groupName <- name, groupCode <- code, groupAbsenceLimit <- Int(limit) ?? 9)
+        let alert = SCLAlertView(appearance: appearance)
+        let name = alert.addTextField("Nombre")
+        let code = alert.addTextField("Clave")
+        let limit = alert.addTextField("Limite de faltas")
+        _ = alert.addButton("Guardar") {
+            let insertGroup = groupsTable.insert(groupName <- name.text ?? "", groupCode <- code.text ?? "", groupAbsenceLimit <- Int(limit.text ?? "9") ?? 9)
             
             do { try globalDatabase.run(insertGroup) }
             catch { print(error) }
@@ -62,9 +60,7 @@ class GroupsVC: UIViewController {
             Loaf("Grupo Creado", state: .success, sender: self).show()
             self.readValues()
         }
-        alert.addAction(cancel)
-        alert.addAction(insert)
-        present(alert, animated: true, completion: nil)
+        _ = alert.showEdit("Nuevo Grupo", subTitle:"Crea un nuevo grupo")
         
     }
     

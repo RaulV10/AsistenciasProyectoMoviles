@@ -10,6 +10,9 @@
 		B757C3202253245700486AC1 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B757C3192253243200486AC1 /* FoldingCell.framework */; };
 		B757C3212253246500486AC1 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B757C3192253243200486AC1 /* FoldingCell.framework */; };
 		B757C3222253246500486AC1 /* FoldingCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B757C3192253243200486AC1 /* FoldingCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B757C3322253828E00486AC1 /* SCLAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B757C32F2253827000486AC1 /* SCLAlertView.framework */; };
+		B757C3332253829500486AC1 /* SCLAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B757C32F2253827000486AC1 /* SCLAlertView.framework */; };
+		B757C3342253829500486AC1 /* SCLAlertView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B757C32F2253827000486AC1 /* SCLAlertView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7EC37CA22507BA6001D1FFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC37C922507BA6001D1FFE /* AppDelegate.swift */; };
 		B7EC37CC22507BA6001D1FFE /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC37CB22507BA6001D1FFE /* GroupsVC.swift */; };
 		B7EC37CF22507BA6001D1FFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EC37CD22507BA6001D1FFE /* Main.storyboard */; };
@@ -73,6 +76,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8499D8841D0054A8004B5B37;
 			remoteInfo = FoldingCell;
+		};
+		B757C32E2253827000486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3292253826F00486AC1 /* SCLAlertView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70264EF71B0F588700B32B18;
+			remoteInfo = SCLAlertView;
+		};
+		B757C3302253827000486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3292253826F00486AC1 /* SCLAlertView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70264F021B0F588800B32B18;
+			remoteInfo = SCLAlertViewTests;
+		};
+		B757C3352253829500486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3292253826F00486AC1 /* SCLAlertView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 70264EF61B0F588700B32B18;
+			remoteInfo = SCLAlertView;
 		};
 		B7FD13972250C87D006E9A2A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -156,6 +180,7 @@
 				B7FD13D622510238006E9A2A /* Loaf.framework in Embed Frameworks */,
 				B757C3222253246500486AC1 /* FoldingCell.framework in Embed Frameworks */,
 				B7FD13A82250C8A3006E9A2A /* SQLite.framework in Embed Frameworks */,
+				B757C3342253829500486AC1 /* SCLAlertView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +189,7 @@
 
 /* Begin PBXFileReference section */
 		B757C3112253243200486AC1 /* FoldingCell.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FoldingCell.xcodeproj; path = "../folding-cell-master/FoldingCell/FoldingCell.xcodeproj"; sourceTree = "<group>"; };
+		B757C3292253826F00486AC1 /* SCLAlertView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SCLAlertView.xcodeproj; path = "../../Desktop/Copia de SCLAlertView-Swift-master/SCLAlertView.xcodeproj"; sourceTree = "<group>"; };
 		B7EC37C622507BA6001D1FFE /* Asistencias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asistencias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EC37C922507BA6001D1FFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		B7EC37CB22507BA6001D1FFE /* GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVC.swift; sourceTree = "<group>"; };
@@ -195,12 +221,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B757C3322253828E00486AC1 /* SCLAlertView.framework in Frameworks */,
 				B757C3202253245700486AC1 /* FoldingCell.framework in Frameworks */,
 				B7FD13D522510238006E9A2A /* Loaf.framework in Frameworks */,
 				B7FD13D42251022B006E9A2A /* Loaf.framework in Frameworks */,
 				B7FD13A72250C8A3006E9A2A /* SQLite.framework in Frameworks */,
 				B757C3212253246500486AC1 /* FoldingCell.framework in Frameworks */,
 				B7FD13A62250C899006E9A2A /* SQLite.framework in Frameworks */,
+				B757C3332253829500486AC1 /* SCLAlertView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,11 +246,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B757C32A2253826F00486AC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B757C32F2253827000486AC1 /* SCLAlertView.framework */,
+				B757C3312253827000486AC1 /* SCLAlertViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B7EC37BD22507BA6001D1FFE = {
 			isa = PBXGroup;
 			children = (
 				B7EC37C822507BA6001D1FFE /* Asistencias */,
 				B7EC37C722507BA6001D1FFE /* Products */,
+				B757C3292253826F00486AC1 /* SCLAlertView.xcodeproj */,
 				B757C3112253243200486AC1 /* FoldingCell.xcodeproj */,
 				B7FD13CD22510222006E9A2A /* Loaf.xcodeproj */,
 				B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */,
@@ -361,6 +399,7 @@
 				B7FD13AA2250C8A3006E9A2A /* PBXTargetDependency */,
 				B7FD13D822510238006E9A2A /* PBXTargetDependency */,
 				B757C3242253246500486AC1 /* PBXTargetDependency */,
+				B757C3362253829500486AC1 /* PBXTargetDependency */,
 			);
 			name = Asistencias;
 			productName = Asistencias;
@@ -403,6 +442,10 @@
 					ProjectRef = B7FD13CD22510222006E9A2A /* Loaf.xcodeproj */;
 				},
 				{
+					ProductGroup = B757C32A2253826F00486AC1 /* Products */;
+					ProjectRef = B757C3292253826F00486AC1 /* SCLAlertView.xcodeproj */;
+				},
+				{
 					ProductGroup = B7FD138E2250C87C006E9A2A /* Products */;
 					ProjectRef = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
 				},
@@ -441,6 +484,20 @@
 			fileType = wrapper.cfbundle;
 			path = FoldingCellDemoTests.xctest;
 			remoteRef = B757C31E2253243200486AC1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B757C32F2253827000486AC1 /* SCLAlertView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SCLAlertView.framework;
+			remoteRef = B757C32E2253827000486AC1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B757C3312253827000486AC1 /* SCLAlertViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SCLAlertViewTests.xctest;
+			remoteRef = B757C3302253827000486AC1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		B7FD13982250C87D006E9A2A /* SQLite.framework */ = {
@@ -546,6 +603,11 @@
 			isa = PBXTargetDependency;
 			name = FoldingCell;
 			targetProxy = B757C3232253246500486AC1 /* PBXContainerItemProxy */;
+		};
+		B757C3362253829500486AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SCLAlertView;
+			targetProxy = B757C3352253829500486AC1 /* PBXContainerItemProxy */;
 		};
 		B7FD13AA2250C8A3006E9A2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -703,6 +765,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62M53E3U8B;
 				INFOPLIST_FILE = Asistencias/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -722,6 +785,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62M53E3U8B;
 				INFOPLIST_FILE = Asistencias/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
