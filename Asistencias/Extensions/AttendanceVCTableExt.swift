@@ -13,25 +13,10 @@ extension AttendanceVC: UITableViewDelegate, UITableViewDataSource {
     
     func readValues() {
         attendanceList.removeAll()
-        
+        newAttendance = true
         do {
-            let query = studentsTable.select(studentsTable[*])
-                .join(groupStudentTable, on: studentsTable[studentId] == groupStudentTable[groupStudentStudentId])
-                .where(groupStudentGroupId == currentGroupId)
-            let students = try globalDatabase.prepare(query)
-            for student in students {
-//                attendanceList.append(Student(id: student[studentId], name: student[studentName], lastName: student[studentLastName], schoolId: student[studentSchoolId], image: student[studentImage] ?? ""))
-                attendanceList.append(Attendance(name: student[studentName], lastName: student[studentLastName], schoolId: student[studentSchoolId], groupStudentId: student[groupStudentId], attendanceTypeId: state, date: todayDate))
-            }
-        } catch { print(error) }
-        attendanceTableView.reloadData()
-    }
-    
-    func newSelectInNewDate() {
-        attendanceList.removeAll()
-        
-        do {
-            let query = groupStudentTable.select(groupStudentTable[groupStudentId], attendanceTable[attendanceDate], attendanceTable[attendanceAttendanceTypeId], studentsTable[studentName], studentsTable[studentLastName], studentsTable[studentSchoolId])
+            let query = groupStudentTable.select(groupStudentTable[groupStudentId], attendanceTable[attendanceDate], attendanceTable[attendanceAttendanceTypeId],
+                studentsTable[studentName], studentsTable[studentLastName], studentsTable[studentSchoolId])
                 .join(studentsTable, on: groupStudentTable[groupStudentStudentId] == studentsTable[studentId])
                 .join(groupsTable, on: groupStudentTable[groupStudentGroupId] == groupsTable[groupId])
                 .join(attendanceTable, on: groupStudentTable[groupStudentId] == attendanceTable[attendanceGroupStudentId])
@@ -41,6 +26,21 @@ extension AttendanceVC: UITableViewDelegate, UITableViewDataSource {
                 attendanceList.append(Attendance(name: student[studentName], lastName: student[studentLastName], schoolId: student[studentSchoolId], groupStudentId: student[groupStudentId], attendanceTypeId: student[attendanceAttendanceTypeId], date: todayDate))
             }
         } catch { print(error) }
+        
+        if attendanceList.count == 0 {
+            newAttendance = true
+            do {
+                let query = studentsTable.select(studentsTable[*])
+                    .join(groupStudentTable, on: studentsTable[studentId] == groupStudentTable[groupStudentStudentId])
+                    .where(groupStudentGroupId == currentGroupId)
+                let students = try globalDatabase.prepare(query)
+                for student in students {
+                    attendanceList.append(Attendance(name: student[studentName], lastName: student[studentLastName], schoolId: student[studentSchoolId], groupStudentId: student[groupStudentId], attendanceTypeId: state, date: todayDate))
+                }
+            } catch { print(error) }
+            
+        }
+        
         attendanceTableView.reloadData()
     }
     

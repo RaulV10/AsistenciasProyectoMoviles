@@ -23,4 +23,11 @@ class AttendanceCell: UITableViewCell {
         self.lblStudentId.text = "Matricula: \(String(studentId))"
     }
     
+    override func awakeFromNib() {
+        viewBackgroundColor.layer.cornerRadius = 10
+        viewBackgroundColor.layer.masksToBounds = true
+        viewBackgroundColor.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        super.awakeFromNib()
+    }
+    
 }

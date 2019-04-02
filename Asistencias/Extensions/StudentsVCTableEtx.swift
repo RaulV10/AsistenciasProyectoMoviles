@@ -52,7 +52,45 @@ extension StudentsVC: UITableViewDelegate, UITableViewDataSource {
         student = studentList[indexPath.row]
         let initialFirstName = String((student.name).prefix(1))
         let initialLastName = String((student.lastName).prefix(1))
-        cell.configureCell(initials: "\(initialFirstName)\(initialLastName)", name: student.name, lastName: student.lastName, studentId: student.schoolId)
+        var countPresent = 0
+        var countAbsent = 0
+        var countLate = 0
+        var countJustify = 0
+        var limitAbsent = 0
+        var hasFailed = false
+        
+        do {
+            countPresent = Int(try globalDatabase.scalar("SELECT COUNT(*) FROM attendance JOIN group_student ON group_student.id == attendance.groupStudentId WHERE group_student.studentId = \(student.id) AND attendance.attendanceTypeId = \(AttendanceType.present.rawValue)") as! Int64)
+            print(count)
+        } catch { print(error) }
+        
+        do {
+            countAbsent = Int(try globalDatabase.scalar("SELECT COUNT(*) FROM attendance JOIN group_student ON group_student.id == attendance.groupStudentId WHERE group_student.studentId = \(student.id) AND attendance.attendanceTypeId = \(AttendanceType.absent.rawValue)") as! Int64)
+            print(count)
+        } catch { print(error) }
+        
+        do {
+            countLate = Int(try globalDatabase.scalar("SELECT COUNT(*) FROM attendance JOIN group_student ON group_student.id == attendance.groupStudentId WHERE group_student.studentId = \(student.id) AND attendance.attendanceTypeId = \(AttendanceType.late.rawValue)") as! Int64)
+            print(count)
+        } catch { print(error) }
+        
+        do {
+            countJustify = Int(try globalDatabase.scalar("SELECT COUNT(*) FROM attendance JOIN group_student ON group_student.id == attendance.groupStudentId WHERE group_student.studentId = \(student.id) AND attendance.attendanceTypeId = \(AttendanceType.justify.rawValue)") as! Int64)
+            print(count)
+        } catch { print(error) }
+        
+        do {
+            limitAbsent = Int(try globalDatabase.scalar("SELECT absenceLimit FROM groups WHERE id = \(currentGroupId)") as! Int64)
+            print(count)
+        } catch { print(error) }
+        
+        if countAbsent + (countLate/2) >= limitAbsent {
+            hasFailed = true
+        } else {
+            hasFailed = false
+        }
+        
+        cell.configureCell(initials: "\(initialFirstName)\(initialLastName)", name: student.name, lastName: student.lastName, studentId: student.schoolId, presentAttendance: countPresent, absentAttendance: countAbsent, lateAttendance: countLate, justifyAttendance: countJustify, failedStatus: hasFailed)
         
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.durationsForExpandedState = durations

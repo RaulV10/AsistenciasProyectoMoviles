@@ -14,6 +14,7 @@ class AttendanceVC: UIViewController {
 
     @IBOutlet weak var txtDatePicker: UITextField!
     @IBOutlet weak var attendanceTableView: UITableView!
+    @IBOutlet weak var btnGuardar: UIButton!
     
     let datePicker = UIDatePicker()
     let date = Date()
@@ -22,6 +23,7 @@ class AttendanceVC: UIViewController {
     var fecha: String = ""
     var state = 1;
     var attendanceList = [Attendance]()
+    var newAttendance = true
     
     var todayDate = ""
     
@@ -66,7 +68,7 @@ class AttendanceVC: UIViewController {
         self.view.endEditing(true)
         todayDate = fecha
         
-        newSelectInNewDate()
+        readValues()
         print(fecha)
     }
     
@@ -79,14 +81,21 @@ class AttendanceVC: UIViewController {
     }
     
     @IBAction func btnSaveAttendance(_ sender: Any) {
-        for element in attendanceList {
-//            print("\(element.schoolId) \(element.attendanceTypeId)")
-            let insertAttendance = attendanceTable.insert(attendanceGroupStudentId <- element.groupStudentId, attendanceAttendanceTypeId <- element.attendanceTypeId, attendanceDate <- todayDate)
+        for _ in attendanceList {
+            let deleteAttendance = attendanceTable.filter(attendanceDate.like(todayDate)).delete()
             
+            do { try globalDatabase.run(deleteAttendance) }
+            catch { print(error) }
+        }
+        
+        for element in attendanceList {
+            let insertAttendance = attendanceTable.insert(attendanceGroupStudentId <- element.groupStudentId, attendanceAttendanceTypeId <- element.attendanceTypeId, attendanceDate <- todayDate)
+
             do { try globalDatabase.run(insertAttendance) }
             catch { print(error) }
         }
+        
+        Loaf("Lista de asistencia guardada", state: .success, sender: self).show()
     }
-    
 }
 

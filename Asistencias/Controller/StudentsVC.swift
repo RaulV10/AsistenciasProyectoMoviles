@@ -50,6 +50,7 @@ class StudentsVC: UIViewController {
             }
             self?.studentsTableView.reloadData()
         })
+        readValues()
     }
     
     @objc func loadList(notification: NSNotification){
