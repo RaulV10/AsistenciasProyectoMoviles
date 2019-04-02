@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum AttendanceType: Int {
+    case present = 1
+    case absent = 2
+    case late = 3
+    case justify = 4
+}

@@ -7,21 +7,187 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B757C3202253245700486AC1 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B757C3192253243200486AC1 /* FoldingCell.framework */; };
+		B757C3212253246500486AC1 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B757C3192253243200486AC1 /* FoldingCell.framework */; };
+		B757C3222253246500486AC1 /* FoldingCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B757C3192253243200486AC1 /* FoldingCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7EC37CA22507BA6001D1FFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC37C922507BA6001D1FFE /* AppDelegate.swift */; };
-		B7EC37CC22507BA6001D1FFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC37CB22507BA6001D1FFE /* ViewController.swift */; };
+		B7EC37CC22507BA6001D1FFE /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC37CB22507BA6001D1FFE /* GroupsVC.swift */; };
 		B7EC37CF22507BA6001D1FFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EC37CD22507BA6001D1FFE /* Main.storyboard */; };
 		B7EC37D122507BA9001D1FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7EC37D022507BA9001D1FFE /* Assets.xcassets */; };
 		B7EC37D422507BA9001D1FFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EC37D222507BA9001D1FFE /* LaunchScreen.storyboard */; };
+		B7FD13882250C15B006E9A2A /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13872250C15B006E9A2A /* GroupCell.swift */; };
+		B7FD138A2250C399006E9A2A /* GroupsVCTableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13892250C399006E9A2A /* GroupsVCTableExt.swift */; };
+		B7FD138C2250C55A006E9A2A /* AttendanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD138B2250C55A006E9A2A /* AttendanceType.swift */; };
+		B7FD13A62250C899006E9A2A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD13982250C87D006E9A2A /* SQLite.framework */; };
+		B7FD13A72250C8A3006E9A2A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD13982250C87D006E9A2A /* SQLite.framework */; };
+		B7FD13A82250C8A3006E9A2A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD13982250C87D006E9A2A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7FD13AE2250C9E8006E9A2A /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13AD2250C9E7006E9A2A /* Database.swift */; };
+		B7FD13B02250CB9E006E9A2A /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13AF2250CB9E006E9A2A /* Functions.swift */; };
+		B7FD13B32250DF76006E9A2A /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13B22250DF76006E9A2A /* Group.swift */; };
+		B7FD13B52250EAA4006E9A2A /* AttendanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13B42250EAA3006E9A2A /* AttendanceVC.swift */; };
+		B7FD13D42251022B006E9A2A /* Loaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD13D222510222006E9A2A /* Loaf.framework */; };
+		B7FD13D522510238006E9A2A /* Loaf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD13D222510222006E9A2A /* Loaf.framework */; };
+		B7FD13D622510238006E9A2A /* Loaf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD13D222510222006E9A2A /* Loaf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7FD13DA225117B0006E9A2A /* SegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13D9225117B0006E9A2A /* SegmentedVC.swift */; };
+		B7FD13DC22514096006E9A2A /* StudentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13DB22514096006E9A2A /* StudentsVC.swift */; };
+		B7FD13DE22514152006E9A2A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13DD22514152006E9A2A /* Student.swift */; };
+		B7FD13E022514336006E9A2A /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13DF22514336006E9A2A /* StudentCell.swift */; };
+		B7FD13E222514457006E9A2A /* StudentsVCTableEtx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13E122514457006E9A2A /* StudentsVCTableEtx.swift */; };
+		B7FD13E622517B56006E9A2A /* AttendanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13E522517B56006E9A2A /* AttendanceCell.swift */; };
+		B7FD13E822517FB6006E9A2A /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13E722517FB6006E9A2A /* Attendance.swift */; };
+		B7FD13EA22518221006E9A2A /* AttendanceVCTableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD13E922518221006E9A2A /* AttendanceVCTableExt.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B757C3182253243200486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3112253243200486AC1 /* FoldingCell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8499D8851D0054A8004B5B37;
+			remoteInfo = FoldingCell;
+		};
+		B757C31A2253243200486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3112253243200486AC1 /* FoldingCell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D57F31C1EDC7A6F0004599F;
+			remoteInfo = "FoldingCell-Demo";
+		};
+		B757C31C2253243200486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3112253243200486AC1 /* FoldingCell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DAA51541EDDBAD700DFC539;
+			remoteInfo = "FoldingCell-DemoObjc";
+		};
+		B757C31E2253243200486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3112253243200486AC1 /* FoldingCell.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A0E1C2D21414940006A0374;
+			remoteInfo = FoldingCellDemoTests;
+		};
+		B757C3232253246500486AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B757C3112253243200486AC1 /* FoldingCell.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8499D8841D0054A8004B5B37;
+			remoteInfo = FoldingCell;
+		};
+		B7FD13972250C87D006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		B7FD13992250C87D006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
+			remoteInfo = "SQLiteTests iOS";
+		};
+		B7FD139B2250C87D006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
+			remoteInfo = "SQLite Mac";
+		};
+		B7FD139D2250C87D006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
+			remoteInfo = "SQLiteTests Mac";
+		};
+		B7FD139F2250C87D006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
+			remoteInfo = "SQLite tvOS";
+		};
+		B7FD13A12250C87D006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
+			remoteInfo = "SQLiteTests tvOS";
+		};
+		B7FD13A32250C87D006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A121AC451CA35C79005A31D1;
+			remoteInfo = "SQLite watchOS";
+		};
+		B7FD13A92250C8A3006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EE247AD21C3F04ED00AE3E12;
+			remoteInfo = "SQLite iOS";
+		};
+		B7FD13D122510222006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD13CD22510222006E9A2A /* Loaf.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 27D9BCFC2208FFCC008064DF;
+			remoteInfo = Loaf;
+		};
+		B7FD13D722510238006E9A2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7FD13CD22510222006E9A2A /* Loaf.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 27D9BCFB2208FFCC008064DF;
+			remoteInfo = Loaf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7FD13AB2250C8A4006E9A2A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7FD13D622510238006E9A2A /* Loaf.framework in Embed Frameworks */,
+				B757C3222253246500486AC1 /* FoldingCell.framework in Embed Frameworks */,
+				B7FD13A82250C8A3006E9A2A /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B757C3112253243200486AC1 /* FoldingCell.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FoldingCell.xcodeproj; path = "../folding-cell-master/FoldingCell/FoldingCell.xcodeproj"; sourceTree = "<group>"; };
 		B7EC37C622507BA6001D1FFE /* Asistencias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asistencias.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7EC37C922507BA6001D1FFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7EC37CB22507BA6001D1FFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7EC37C922507BA6001D1FFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		B7EC37CB22507BA6001D1FFE /* GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVC.swift; sourceTree = "<group>"; };
 		B7EC37CE22507BA6001D1FFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7EC37D022507BA9001D1FFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7EC37D322507BA9001D1FFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7EC37D522507BA9001D1FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FD13872250C15B006E9A2A /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		B7FD13892250C399006E9A2A /* GroupsVCTableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVCTableExt.swift; sourceTree = "<group>"; };
+		B7FD138B2250C55A006E9A2A /* AttendanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceType.swift; sourceTree = "<group>"; };
+		B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Desktop/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		B7FD13AD2250C9E7006E9A2A /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		B7FD13AF2250CB9E006E9A2A /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		B7FD13B22250DF76006E9A2A /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		B7FD13B42250EAA3006E9A2A /* AttendanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceVC.swift; sourceTree = "<group>"; };
+		B7FD13CD22510222006E9A2A /* Loaf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Loaf.xcodeproj; path = "../../Desktop/Loaf-master-2/Loaf/Loaf.xcodeproj"; sourceTree = "<group>"; };
+		B7FD13D9225117B0006E9A2A /* SegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedVC.swift; sourceTree = "<group>"; };
+		B7FD13DB22514096006E9A2A /* StudentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsVC.swift; sourceTree = "<group>"; };
+		B7FD13DD22514152006E9A2A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		B7FD13DF22514336006E9A2A /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
+		B7FD13E122514457006E9A2A /* StudentsVCTableEtx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsVCTableEtx.swift; sourceTree = "<group>"; };
+		B7FD13E522517B56006E9A2A /* AttendanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceCell.swift; sourceTree = "<group>"; };
+		B7FD13E722517FB6006E9A2A /* Attendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
+		B7FD13E922518221006E9A2A /* AttendanceVCTableExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceVCTableExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +195,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B757C3202253245700486AC1 /* FoldingCell.framework in Frameworks */,
+				B7FD13D522510238006E9A2A /* Loaf.framework in Frameworks */,
+				B7FD13D42251022B006E9A2A /* Loaf.framework in Frameworks */,
+				B7FD13A72250C8A3006E9A2A /* SQLite.framework in Frameworks */,
+				B757C3212253246500486AC1 /* FoldingCell.framework in Frameworks */,
+				B7FD13A62250C899006E9A2A /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B757C3122253243200486AC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B757C3192253243200486AC1 /* FoldingCell.framework */,
+				B757C31B2253243200486AC1 /* FoldingCell-Demo.app */,
+				B757C31D2253243200486AC1 /* FoldingCell-DemoObjc.app */,
+				B757C31F2253243200486AC1 /* FoldingCellDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B7EC37BD22507BA6001D1FFE = {
 			isa = PBXGroup;
 			children = (
 				B7EC37C822507BA6001D1FFE /* Asistencias */,
 				B7EC37C722507BA6001D1FFE /* Products */,
+				B757C3112253243200486AC1 /* FoldingCell.xcodeproj */,
+				B7FD13CD22510222006E9A2A /* Loaf.xcodeproj */,
+				B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */,
+				B7FD13D32251022B006E9A2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +241,106 @@
 		B7EC37C822507BA6001D1FFE /* Asistencias */ = {
 			isa = PBXGroup;
 			children = (
-				B7EC37C922507BA6001D1FFE /* AppDelegate.swift */,
-				B7EC37CB22507BA6001D1FFE /* ViewController.swift */,
+				B7FD13AC2250C9A9006E9A2A /* Utilities */,
+				B7FD13862250BD1D006E9A2A /* Extensions */,
+				B7FD13852250BD18006E9A2A /* Enums */,
+				B7FD13842250BD13006E9A2A /* Model */,
+				B7FD13832250BD0A006E9A2A /* View */,
+				B7FD13822250BD02006E9A2A /* Controller */,
 				B7EC37CD22507BA6001D1FFE /* Main.storyboard */,
 				B7EC37D022507BA9001D1FFE /* Assets.xcassets */,
 				B7EC37D222507BA9001D1FFE /* LaunchScreen.storyboard */,
 				B7EC37D522507BA9001D1FFE /* Info.plist */,
 			);
 			path = Asistencias;
+			sourceTree = "<group>";
+		};
+		B7FD13822250BD02006E9A2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7EC37CB22507BA6001D1FFE /* GroupsVC.swift */,
+				B7FD13B42250EAA3006E9A2A /* AttendanceVC.swift */,
+				B7FD13D9225117B0006E9A2A /* SegmentedVC.swift */,
+				B7FD13DB22514096006E9A2A /* StudentsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7FD13832250BD0A006E9A2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD13872250C15B006E9A2A /* GroupCell.swift */,
+				B7FD13DF22514336006E9A2A /* StudentCell.swift */,
+				B7FD13E522517B56006E9A2A /* AttendanceCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7FD13842250BD13006E9A2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD13B22250DF76006E9A2A /* Group.swift */,
+				B7FD13DD22514152006E9A2A /* Student.swift */,
+				B7FD13E722517FB6006E9A2A /* Attendance.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7FD13852250BD18006E9A2A /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD138B2250C55A006E9A2A /* AttendanceType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B7FD13862250BD1D006E9A2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD13892250C399006E9A2A /* GroupsVCTableExt.swift */,
+				B7FD13E122514457006E9A2A /* StudentsVCTableEtx.swift */,
+				B7FD13E922518221006E9A2A /* AttendanceVCTableExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B7FD138E2250C87C006E9A2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD13982250C87D006E9A2A /* SQLite.framework */,
+				B7FD139A2250C87D006E9A2A /* SQLiteTests iOS.xctest */,
+				B7FD139C2250C87D006E9A2A /* SQLite.framework */,
+				B7FD139E2250C87D006E9A2A /* SQLiteTests Mac.xctest */,
+				B7FD13A02250C87D006E9A2A /* SQLite.framework */,
+				B7FD13A22250C87D006E9A2A /* SQLiteTests tvOS.xctest */,
+				B7FD13A42250C87D006E9A2A /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7FD13AC2250C9A9006E9A2A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD13AD2250C9E7006E9A2A /* Database.swift */,
+				B7FD13AF2250CB9E006E9A2A /* Functions.swift */,
+				B7EC37C922507BA6001D1FFE /* AppDelegate.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B7FD13CE22510222006E9A2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7FD13D222510222006E9A2A /* Loaf.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7FD13D32251022B006E9A2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,10 +353,14 @@
 				B7EC37C222507BA6001D1FFE /* Sources */,
 				B7EC37C322507BA6001D1FFE /* Frameworks */,
 				B7EC37C422507BA6001D1FFE /* Resources */,
+				B7FD13AB2250C8A4006E9A2A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B7FD13AA2250C8A3006E9A2A /* PBXTargetDependency */,
+				B7FD13D822510238006E9A2A /* PBXTargetDependency */,
+				B757C3242253246500486AC1 /* PBXTargetDependency */,
 			);
 			name = Asistencias;
 			productName = Asistencias;
@@ -110,12 +393,113 @@
 			mainGroup = B7EC37BD22507BA6001D1FFE;
 			productRefGroup = B7EC37C722507BA6001D1FFE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B757C3122253243200486AC1 /* Products */;
+					ProjectRef = B757C3112253243200486AC1 /* FoldingCell.xcodeproj */;
+				},
+				{
+					ProductGroup = B7FD13CE22510222006E9A2A /* Products */;
+					ProjectRef = B7FD13CD22510222006E9A2A /* Loaf.xcodeproj */;
+				},
+				{
+					ProductGroup = B7FD138E2250C87C006E9A2A /* Products */;
+					ProjectRef = B7FD138D2250C87C006E9A2A /* SQLite.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B7EC37C522507BA6001D1FFE /* Asistencias */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B757C3192253243200486AC1 /* FoldingCell.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FoldingCell.framework;
+			remoteRef = B757C3182253243200486AC1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B757C31B2253243200486AC1 /* FoldingCell-Demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "FoldingCell-Demo.app";
+			remoteRef = B757C31A2253243200486AC1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B757C31D2253243200486AC1 /* FoldingCell-DemoObjc.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "FoldingCell-DemoObjc.app";
+			remoteRef = B757C31C2253243200486AC1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B757C31F2253243200486AC1 /* FoldingCellDemoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FoldingCellDemoTests.xctest;
+			remoteRef = B757C31E2253243200486AC1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD13982250C87D006E9A2A /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = B7FD13972250C87D006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD139A2250C87D006E9A2A /* SQLiteTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests iOS.xctest";
+			remoteRef = B7FD13992250C87D006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD139C2250C87D006E9A2A /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = B7FD139B2250C87D006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD139E2250C87D006E9A2A /* SQLiteTests Mac.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests Mac.xctest";
+			remoteRef = B7FD139D2250C87D006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD13A02250C87D006E9A2A /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = B7FD139F2250C87D006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD13A22250C87D006E9A2A /* SQLiteTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteTests tvOS.xctest";
+			remoteRef = B7FD13A12250C87D006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD13A42250C87D006E9A2A /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = B7FD13A32250C87D006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7FD13D222510222006E9A2A /* Loaf.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Loaf.framework;
+			remoteRef = B7FD13D122510222006E9A2A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B7EC37C422507BA6001D1FFE /* Resources */ = {
@@ -135,12 +519,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7EC37CC22507BA6001D1FFE /* ViewController.swift in Sources */,
+				B7FD13882250C15B006E9A2A /* GroupCell.swift in Sources */,
+				B7FD13B52250EAA4006E9A2A /* AttendanceVC.swift in Sources */,
+				B7FD13E822517FB6006E9A2A /* Attendance.swift in Sources */,
+				B7FD13AE2250C9E8006E9A2A /* Database.swift in Sources */,
+				B7FD13DC22514096006E9A2A /* StudentsVC.swift in Sources */,
+				B7EC37CC22507BA6001D1FFE /* GroupsVC.swift in Sources */,
+				B7FD13B32250DF76006E9A2A /* Group.swift in Sources */,
+				B7FD13E622517B56006E9A2A /* AttendanceCell.swift in Sources */,
+				B7FD13E022514336006E9A2A /* StudentCell.swift in Sources */,
+				B7FD13DA225117B0006E9A2A /* SegmentedVC.swift in Sources */,
+				B7FD13DE22514152006E9A2A /* Student.swift in Sources */,
+				B7FD13E222514457006E9A2A /* StudentsVCTableEtx.swift in Sources */,
+				B7FD13B02250CB9E006E9A2A /* Functions.swift in Sources */,
 				B7EC37CA22507BA6001D1FFE /* AppDelegate.swift in Sources */,
+				B7FD138C2250C55A006E9A2A /* AttendanceType.swift in Sources */,
+				B7FD138A2250C399006E9A2A /* GroupsVCTableExt.swift in Sources */,
+				B7FD13EA22518221006E9A2A /* AttendanceVCTableExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B757C3242253246500486AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FoldingCell;
+			targetProxy = B757C3232253246500486AC1 /* PBXContainerItemProxy */;
+		};
+		B7FD13AA2250C8A3006E9A2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = B7FD13A92250C8A3006E9A2A /* PBXContainerItemProxy */;
+		};
+		B7FD13D822510238006E9A2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Loaf;
+			targetProxy = B7FD13D722510238006E9A2A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B7EC37CD22507BA6001D1FFE /* Main.storyboard */ = {
@@ -281,6 +698,7 @@
 		B7EC37D922507BA9001D1FFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62M53E3U8B;
@@ -299,6 +717,7 @@
 		B7EC37DA22507BA9001D1FFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62M53E3U8B;

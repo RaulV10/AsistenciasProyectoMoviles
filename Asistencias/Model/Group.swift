@@ -6,4 +6,16 @@
 //  Copyright © 2019 Raul Ernesto Villarreal Sigala. All rights reserved.
 //
 
-import Foundation
+class Group {
+    var id: Int
+    var name: String
+    var code: String
+    var limit: Int
+    
+    init(id: Int, name: String, code: String, limit: Int){
+        self.id = id
+        self.name = name
+        self.code = code
+        self.limit = limit
+    }
+}
