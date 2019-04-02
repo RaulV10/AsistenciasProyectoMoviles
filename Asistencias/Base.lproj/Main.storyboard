@@ -487,10 +487,6 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkS-0g-KgS" userLabel="bar">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rji-51-GA3">
-                                                                            <rect key="frame" x="14" y="10" width="38" height="29"/>
-                                                                            <state key="normal" image="burger"/>
-                                                                        </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="301654" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljh-Am-nl7">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="49"/>
                                                                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="18"/>
@@ -512,9 +508,7 @@
                                                                         <constraint firstAttribute="bottom" secondItem="Ljh-Am-nl7" secondAttribute="bottom" id="CDp-BH-q6t"/>
                                                                         <constraint firstItem="Ljh-Am-nl7" firstAttribute="leading" secondItem="EkS-0g-KgS" secondAttribute="leading" id="G1o-PD-GPA"/>
                                                                         <constraint firstAttribute="height" constant="49" id="W43-Sx-TOE"/>
-                                                                        <constraint firstItem="rji-51-GA3" firstAttribute="leading" secondItem="EkS-0g-KgS" secondAttribute="leading" constant="14" id="ejB-Cd-U6V"/>
                                                                         <constraint firstItem="Ljh-Am-nl7" firstAttribute="top" secondItem="EkS-0g-KgS" secondAttribute="top" id="url-lM-IHV"/>
-                                                                        <constraint firstItem="rji-51-GA3" firstAttribute="centerY" secondItem="EkS-0g-KgS" secondAttribute="centerY" id="wQm-2U-B3g"/>
                                                                         <constraint firstItem="ZXs-WV-6EW" firstAttribute="top" secondItem="EkS-0g-KgS" secondAttribute="top" id="xZ6-PT-157"/>
                                                                         <constraint firstAttribute="trailing" secondItem="ZXs-WV-6EW" secondAttribute="trailing" constant="12" id="yN3-xN-iQ4"/>
                                                                     </constraints>
@@ -770,7 +764,7 @@
                                                                         <constraint firstAttribute="height" constant="41" id="ifa-OL-Puz"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
-                                                                    <state key="normal" title="REPROBAR">
+                                                                    <state key="normal" title="Modificar">
                                                                         <color key="titleColor" red="0.27058823529999998" green="0.2156862745" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
                                                                     <userDefinedRuntimeAttributes>
@@ -780,7 +774,6 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                     <connections>
                                                                         <action selector="btnFailed:" destination="2qq-Mb-80O" eventType="touchUpInside" id="SMx-7h-tp3"/>
-                                                                        <segue destination="XHD-Im-aT8" kind="show" id="atJ-FM-mV0"/>
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Este alumno esta en [] clases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8v-9p-BAr">
@@ -896,11 +889,11 @@
             <objects>
                 <viewController id="XHD-Im-aT8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0g-Tx-GzO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4c1c668ed999b5525ca0cb0484b22b18-2" translatesAutoresizingMaskIntoConstraints="NO" id="I1M-2k-xO5">
-                                <rect key="frame" x="44" y="266" width="326" height="228"/>
+                                <rect key="frame" x="44" y="266" width="326" height="364"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -920,7 +913,6 @@
     </scenes>
     <resources>
         <image name="4c1c668ed999b5525ca0cb0484b22b18-2" width="400" height="320"/>
-        <image name="burger" width="38" height="29"/>
         <image name="classroom-iStock" width="1862" height="1048"/>
         <image name="dots" width="14" height="84"/>
     </resources>

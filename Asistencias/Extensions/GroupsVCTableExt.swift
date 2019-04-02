@@ -42,17 +42,10 @@ extension GroupsVC: UITableViewDelegate, UITableViewDataSource {
         group = groupList[indexPath.row]
         performSegue(withIdentifier: "AttendanceVC", sender: group)
         tableView.deselectRow(at: indexPath, animated: true)
-//        print(indexPath.row)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let segmentedVC = segue.destination as? SegmentedVC {
-//            let btnBack = UIBarButtonItem()
-//            btnBack.title = ""
-//            navigationItem.backBarButtonItem = btnBack
-//
-//            assert(sender as? Group != nil)
-//            attendanceVC.initStudents(group: sender as! Group)
             segmentedVC.initStudents(group: sender as! Group)
         }
     }
