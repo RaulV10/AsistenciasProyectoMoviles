@@ -13,6 +13,7 @@ class AttendanceCell: UITableViewCell {
     @IBOutlet weak var lblInitials: UILabel!
     @IBOutlet weak var lblFullName: UILabel!
     @IBOutlet weak var lblStudentId: UILabel!
+    @IBOutlet weak var viewBackgroundColor: UIView!
     
     var state: Int = 1
     
@@ -20,11 +21,6 @@ class AttendanceCell: UITableViewCell {
         self.lblInitials.text = initials
         self.lblFullName.text = "\(name) \(lastName)"
         self.lblStudentId.text = "Matricula: \(String(studentId))"
-    }
-
-    @IBAction func btnAttendanceType(_ sender: Any) {
-        (state >= 4) ? (state = 1) : (state += 1)
-        print(state)
     }
     
 }

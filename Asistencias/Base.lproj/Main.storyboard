@@ -303,6 +303,7 @@
                                             <outlet property="lblFullName" destination="AAw-yM-33b" id="gmy-UH-xK6"/>
                                             <outlet property="lblInitials" destination="h0A-d2-fB4" id="aIw-AE-EhC"/>
                                             <outlet property="lblStudentId" destination="Qff-va-4fz" id="esQ-tB-lH5"/>
+                                            <outlet property="viewBackgroundColor" destination="D1D-Cc-gZi" id="3sm-ts-nMy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -317,6 +318,9 @@
                                 <state key="normal" title="Guardar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSaveAttendance:" destination="5nv-Yq-IfJ" eventType="touchUpInside" id="g8p-sY-3Ja"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

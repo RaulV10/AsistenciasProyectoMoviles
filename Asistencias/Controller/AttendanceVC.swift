@@ -8,6 +8,7 @@
 
 import UIKit
 import Loaf
+import SQLite
 
 class AttendanceVC: UIViewController {
 
@@ -19,22 +20,25 @@ class AttendanceVC: UIViewController {
     let formatter = DateFormatter()
     
     var fecha: String = ""
-    var attendanceList = [Student]()
+    var state = 1;
+    var attendanceList = [Attendance]()
+    
+    var todayDate = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         attendanceTableView.delegate = self
         attendanceTableView.dataSource = self
         
+        formatter.dateFormat = "dd/MM/yyyy"
+        todayDate = formatter.string(from: date)
+        txtDatePicker.text = todayDate
+        showDatePicker()
+        
         readValues()
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
         
         fillAttendanceTypeTable()
-        
-        formatter.dateFormat = "dd/MM/yyyy"
-        let todayDate = formatter.string(from: date)
-        txtDatePicker.text = todayDate
-        showDatePicker()
     }
     
     func showDatePicker() {
@@ -60,7 +64,9 @@ class AttendanceVC: UIViewController {
         txtDatePicker.text = formatter.string(from: datePicker.date)
         fecha = String(formatter.string(from: datePicker.date))
         self.view.endEditing(true)
+        todayDate = fecha
         
+        newSelectInNewDate()
         print(fecha)
     }
     
@@ -71,5 +77,16 @@ class AttendanceVC: UIViewController {
     @objc func loadList(notification: NSNotification){
         readValues()
     }
+    
+    @IBAction func btnSaveAttendance(_ sender: Any) {
+        for element in attendanceList {
+//            print("\(element.schoolId) \(element.attendanceTypeId)")
+            let insertAttendance = attendanceTable.insert(attendanceGroupStudentId <- element.groupStudentId, attendanceAttendanceTypeId <- element.attendanceTypeId, attendanceDate <- todayDate)
+            
+            do { try globalDatabase.run(insertAttendance) }
+            catch { print(error) }
+        }
+    }
+    
 }
 

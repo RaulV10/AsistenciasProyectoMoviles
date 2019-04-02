@@ -7,13 +7,17 @@
 //
 
 class Attendance {
-    var id: Int
+    var name: String
+    var lastName: String
+    var schoolId: Int
     var groupStudentId: Int
     var attendanceTypeId: Int
     var date: String
     
-    init(id: Int, groupStudentId: Int, attendanceTypeId: Int, date: String) {
-        self.id = id
+    init(name: String, lastName: String, schoolId: Int, groupStudentId: Int, attendanceTypeId: Int, date: String) {
+        self.name = name
+        self.lastName = lastName
+        self.schoolId = schoolId
         self.groupStudentId = groupStudentId
         self.attendanceTypeId = attendanceTypeId
         self.date = date
